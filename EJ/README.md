@@ -60,3 +60,8 @@
     이벤트 앞에 **on**을 붙여야 React JS에 event listener 생성한다고 알려줄 수 있음
 
 > addEventListener 반복하는 대신에 property에서 event를 등록할 수 있음!
+
+### 2.4 Recap
+\# 복습
+- ReactJS와 React-DOM import 시켜야한다는 것과 각각의 역할
+- props로 eventlistener 넣어줄 수 있다는 것
