@@ -7,19 +7,16 @@
     
     ⇒ querySelector로 해당 태그 지정해두고 event함수에서 innerText 변환해주기
     
-    +) $변수(가변 변수) 넣어주려면 
+    +) $변수(가변 변수) 넣어주려면 다음과 같이 백쿼터 넣어주기
     ```javascript 
     span.innerText = `Total clicks: ${counter};`
     ``` 
-    다음과 같이 백쿼터 넣어주기 
     
 - 먼저 리액트를 사용하기 위해서는
-    
     ```html
     <script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
     <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
     ```
-    
     리액트를 먼저 임폴트 시켜줘야 함
 
 ### 2.2 Our First React Element
@@ -41,3 +38,25 @@
 - render : React element를 가지고 HTML 만들어 배치하여 사용자에게 보여줌
 
 > 자바스크립트로 시작해 HTML이 되는 것이 이번 강의의 핵심
+
+### 2.3 Events in React
+- 여러 element render 하고 싶으면 container로 묶기
+
+    ex)
+    ```jsx
+    const root = document.getElementById("root");
+    const span = React.createElement("span", null, "Hello I'm a span");
+    const btn = React.createElement("button", null, "Click me");
+    const container = React.createElement("div", null, [span, btn]);
+    ReactDOM.render(container, root)
+    ```
+    
+- 2번째 argument로 eventListener 줄 수 있음
+
+    ex)
+    ```jsx
+    { 1st arg, onClick: () => console.log("Click"), 3rd arg }
+    ```
+    이벤트 앞에 **on**을 붙여야 React JS에 event listener 생성한다고 알려줄 수 있음
+
+> addEventListener 반복하는 대신에 property에서 event를 등록할 수 있음!
