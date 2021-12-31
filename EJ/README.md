@@ -79,3 +79,29 @@ createElement 대체 ⇒ JSX : JavaScript를 확장한 문법
     </script>
     ```
     [Babel · The compiler for next generation JavaScript](https://babeljs.io/)
+
+### 2.6 JSX part Two
+컴포넌트를 다른 컴포넌트 안에 포함시키기 위해서는 함수로 만들어줘야 함
+
+`() ⇒`(arrow function) 추가해주면 함수됨
+```jsx
+const Title = () => (
+  <h3 id="title" onMouseEnter={() => console.log("mouse enter")}>
+    Hello I'm a title
+  </h3>
+);
+```
+```jsx
+function Title() {
+	return (
+	  <h3 id="title" onMouseEnter={() => console.log("mouse enter")}>
+	    Hello I'm a title
+	  </h3>
+	);
+}
+```
+위의 2개 동일
+
+- 컴포넌트 **첫글자 반드시 대문자**로,  태그처럼 적어주면(ex. `<Title />`) 복붙같은 역할
+
+> 직접 만든 컴포넌트를 렌더링해서 다른 곳에서 사용할 때 항상 대문자로 시작해야 함.
