@@ -65,3 +65,17 @@
 \# 복습
 - ReactJS와 React-DOM import 시켜야한다는 것과 각각의 역할
 - props로 eventlistener 넣어줄 수 있다는 것
+
+### 2.5 JSX
+createElement 대체 ⇒ JSX : JavaScript를 확장한 문법
+
+- 생긴 게 HTML이랑 비슷해서 JSX로 Teact 요소 만드는 게 편함
+- 브라우저는 JSX를 이해하지 못하므로 Babel을 통해 변환 해줌(이 방법 느려서 보통 사용 안 할 거임)
+
+    ```jsx
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+    // code
+    </script>
+    ```
+    [Babel · The compiler for next generation JavaScript](https://babeljs.io/)
