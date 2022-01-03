@@ -1,3 +1,5 @@
+[1강](#1강) | [2강](#2강) | [3강](#3강)
+
 # 1강
 정리 없음
 <br/><br/>
@@ -150,3 +152,13 @@ state를 세팅해주는 2가지 방법
 class, for 는 jsx에서 노노하기 때문에 노노함  
 class → className  
 for → htmlFor
+
+## 3.6 State Practice part One
+정리 없음
+
+## 3.7 State Practice part Two
+정리 없음
+
+## 3.8 Recap
+state를 바탕으로 UI를 변경할 수 있다는 게 얼마나 유용한 건지를 알 수 있는 시간 가짐
+
