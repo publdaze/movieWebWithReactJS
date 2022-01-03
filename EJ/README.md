@@ -123,3 +123,8 @@ state - 값이 바뀔 데이터 담아 두는데 쓰임
     const [counter, modifier] = React.useState(0);
     //const counter = data[0] 이런 식으로 일일이 대입 안 해줘도 됨
     ```
+
+## 3.2 setState part Two
+왜 위(3.1 code)와 같은 modifier 필요?
+
+→ 어떤 값을 부여하던 modifier 함수는 그 값으로 업데이트하고 리렌더링 일으킴
