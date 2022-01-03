@@ -116,3 +116,10 @@ state - 값이 바뀔 데이터 담아 두는데 쓰임
 - 데이터가 바뀔 때마다 리렌더링 해주기
 
 > 리액트는 UI에서 딱 바뀐 부분만 업데이트 해줌
+
+## 3.1 setState part One
+- `React.useState()` - `[data, f]` 배열    
+    ```jsx
+    const [counter, modifier] = React.useState(0);
+    //const counter = data[0] 이런 식으로 일일이 대입 안 해줘도 됨
+    ```
