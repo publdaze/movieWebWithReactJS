@@ -8,20 +8,15 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script type="text/babel">
       const root = document.getElementById("root");
-      let counter = 0;
-      function countUp() {
-        counter = counter + 1;
-        render();
+      function App() {
+        const [counter, modifier] = React.useState(0);
+        return (
+          <div>
+            <h3>Hello I'm a title</h3>
+            <button>Total clicks: 0</button>
+          </div>
+        );
       }
-      function render() {
-        ReactDOM.render(<Container />, root);
-      }
-      const Container = () => ( //Container 첫글자 대문자로
-        <div>
-          <h3>Hello I'm a title</h3>
-          <button onClick={countUp}>Total clicks: {counter}</button>
-        </div>
-      );
-      render();
+      ReactDOM.render(<App />, root);
     </script>
 </html>
