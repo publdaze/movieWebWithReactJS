@@ -1,3 +1,5 @@
+[1강](#1강) | [2강](#2강) | [3강](#3강)
+
 # 1강
 정리 없음
 <br/><br/>
@@ -116,3 +118,49 @@ state - 값이 바뀔 데이터 담아 두는데 쓰임
 - 데이터가 바뀔 때마다 리렌더링 해주기
 
 > 리액트는 UI에서 딱 바뀐 부분만 업데이트 해줌
+
+## 3.1 setState part One
+- `React.useState()` - `[data, f]` 배열    
+    ```jsx
+    const [counter, modifier] = React.useState(0);
+    //const counter = data[0] 이런 식으로 일일이 대입 안 해줘도 됨
+    ```
+
+## 3.2 setState part Two
+왜 위(3.1 code)와 같은 modifier 필요?
+
+→ 어떤 값을 부여하던 modifier 함수는 그 값으로 업데이트하고 리렌더링 일으킴
+
+## 3.3 Recap
+- 어플리케이션의 데이터를 바꿀때 modifier 함수로 state를 바꿀때, 컴포넌트 전체가 새로운 값을 가지고 재생성될거임
+
+> state 바뀌면 리렌더링 일어남
+
+## 3.4 State Functions
+현재 값을 바탕으로 다음 값을 설정하고 싶다면<br/>
+`setCounter(counter + 1);`<br/>
+보다<br/>
+`setCounter((current) => current + 1);`<br/>
+이런 식으로 했을 때 current가 확실히 현재값이라는 걸 보장할 수 있음  
+우리가 현재 state를 바탕으로 다음 state를 계산해내고 싶다면 이런식으로 함수를 써야함
+
+state를 세팅해주는 2가지 방법
+1. 직접 값을 설정해주는 것 (ex. 원하는 숫자 넣어주기)
+2. 함수를 전달하기
+
+## 3.5 Inputs and State
+class, for 는 jsx에서 노노하기 때문에 노노함  
+class → className  
+for → htmlFor
+
+## 3.6 State Practice part One
+정리 없음
+
+## 3.7 State Practice part Two
+정리 없음
+
+## 3.8 Recap
+state를 바탕으로 UI를 변경할 수 있다는 게 얼마나 유용한 건지를 알 수 있는 시간 가짐
+
+## 3.9 Final Practice and Recap
+정리 없음
