@@ -145,3 +145,8 @@ state - 값이 바뀔 데이터 담아 두는데 쓰임
 state를 세팅해주는 2가지 방법
 1. 직접 값을 설정해주는 것 (ex. 원하는 숫자 넣어주기)
 2. 함수를 전달하기
+
+## 3.5 Inputs and State
+class, for 는 jsx에서 노노하기 때문에 노노함  
+class → className  
+for → htmlFor
