@@ -162,3 +162,5 @@ for → htmlFor
 ## 3.8 Recap
 state를 바탕으로 UI를 변경할 수 있다는 게 얼마나 유용한 건지를 알 수 있는 시간 가짐
 
+## 3.9 Final Practice and Recap
+정리 없음
