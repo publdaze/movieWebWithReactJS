@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <div id = "root"></div>
+    </body>
+    <script src = "https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+    <script src = "https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+    <!--리액트 dom 은 리액트 앨리먼트를 HTML에 둘 수 있도록 하는 역할-->
+    
+    <script>
+    //안쓰는 방식. but react의 본질
+        const root = document.getElementById("root")
+        const span1 = React.createElement("span",{id:"span1"},"여기있다~");
+        //"span"은 html 엘리먼트로 적어야함!!
+        //단 한줄의 코드로 span을 만들고 id를 줌~~~
+
+        ReactDOM.render(span1,root)
+        //render : 리액트 앨리먼트를 HTML로 만들어 배치
+        //root안에 span1이 위치함!
+        //<div id = "root"><span></span><div>
+       
+    </script>
+</html>
+
+<!-- 리액트는, 자바스크립트에서 모든걸 시작!! 그게 HTML이 되는거임!
+html에서 만들고 , 자바스크립트에서 바꾸는게 아니라!
+-->

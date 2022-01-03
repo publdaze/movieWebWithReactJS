@@ -1,8 +1,9 @@
 # 1강
-정리 없음<br/><br/>
+정리 없음
+<br/><br/>
 
 # 2강
-### 2.1 Before React
+## 2.1 Before React
 - html에서는 바로 변경된 결과 값이 텍스트에 반영되지 않음
     
     ⇒ querySelector로 해당 태그 지정해두고 event함수에서 innerText 변환해주기
@@ -19,7 +20,7 @@
     ```
     리액트를 먼저 임폴트 시켜줘야 함
 
-### 2.2 Our First React Element
+## 2.2 Our First React Element
 \# 어렵게 코딩하는 법 먼저 실습
 
 - html 코드 직접 작성하지 않고 javascript코드와 react 사용하여 element 생성
@@ -39,7 +40,7 @@
 
 > 자바스크립트로 시작해 HTML이 되는 것이 이번 강의의 핵심
 
-### 2.3 Events in React
+## 2.3 Events in React
 - 여러 element render 하고 싶으면 container로 묶기
 
     ex)
@@ -61,12 +62,12 @@
 
 > addEventListener 반복하는 대신에 property에서 event를 등록할 수 있음!
 
-### 2.4 Recap
+## 2.4 Recap
 \# 복습
 - ReactJS와 React-DOM import 시켜야한다는 것과 각각의 역할
 - props로 eventlistener 넣어줄 수 있다는 것
 
-### 2.5 JSX
+## 2.5 JSX
 createElement 대체 ⇒ JSX : JavaScript를 확장한 문법
 
 - 생긴 게 HTML이랑 비슷해서 JSX로 Teact 요소 만드는 게 편함
@@ -80,7 +81,7 @@ createElement 대체 ⇒ JSX : JavaScript를 확장한 문법
     ```
     [Babel · The compiler for next generation JavaScript](https://babeljs.io/)
 
-### 2.6 JSX part Two
+## 2.6 JSX part Two
 컴포넌트를 다른 컴포넌트 안에 포함시키기 위해서는 함수로 만들어줘야 함
 
 `() ⇒`(arrow function) 추가해주면 함수됨
@@ -105,3 +106,13 @@ function Title() {
 - 컴포넌트 **첫글자 반드시 대문자**로,  태그처럼 적어주면(ex. `<Title />`) 복붙같은 역할
 
 > 직접 만든 컴포넌트를 렌더링해서 다른 곳에서 사용할 때 항상 대문자로 시작해야 함.
+<br/><br/>
+
+# 3강
+## 3.0 Understanding State
+state - 값이 바뀔 데이터 담아 두는데 쓰임
+
+- 중괄호 열어주고 변수 담아주기
+- 데이터가 바뀔 때마다 리렌더링 해주기
+
+> 리액트는 UI에서 딱 바뀐 부분만 업데이트 해줌
