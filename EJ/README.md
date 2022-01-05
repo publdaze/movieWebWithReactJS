@@ -200,3 +200,6 @@ Btn.propTypes = {
 이런식으로 리액트에게 props 타입 알려줌
 - 꼭 들어가야 하는 것에는 `.isRequired` 붙여주기
 - 정의되지 않은 변수에 관한 기본값은 함수 매개변수 부분?에 `function Btn({text, **fontSize = 14**})` 이와 같이 줄 수 있음
+
+## 4.3 Recap
+정리 없음
