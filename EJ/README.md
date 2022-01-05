@@ -180,3 +180,23 @@ state를 바탕으로 UI를 변경할 수 있다는 게 얼마나 유용한 건�
 → 느려질 수 있음
 
 React.memo()하면 props가 변경되지 않는다면 다시 그릴 필요가 없다는 걸 말해줌
+
+## 4.2 Prop Types
+props 타입 리액트에게 알려줌
+
+```jsx
+<script src="https://unpkg.com/prop-types@15.7.2/prop-types.js"></script>
+```
+
+이렇게 먼저 import 해주고
+
+```jsx
+Btn.propTypes = {
+	text: PropTypes.string,
+	fontSize: PropTypes.number,
+}
+```
+
+이런식으로 리액트에게 props 타입 알려줌
+- 꼭 들어가야 하는 것에는 `.isRequired` 붙여주기
+- 정의되지 않은 변수에 관한 기본값은 함수 매개변수 부분?에 `function Btn({text, **fontSize = 14**})` 이와 같이 줄 수 있음
