@@ -1,4 +1,4 @@
-[1강](#1강) | [2강](#2강) | [3강](#3강)
+[1강](#1강) | [2강](#2강) | [3강](#3강) | [4강](#4강)
 
 # 1강
 정리 없음
@@ -163,4 +163,43 @@ for → htmlFor
 state를 바탕으로 UI를 변경할 수 있다는 게 얼마나 유용한 건지를 알 수 있는 시간 가짐
 
 ## 3.9 Final Practice and Recap
+정리 없음
+
+# 4강
+## 4.0 Props
+- Props - 부모 컴포넌트로부터 자식 컴포넌트에 데이터를 보낼 수 있게 해주는 방법.
+    - props는 첫번째이자 유일한 인자(, 오브젝트)
+        - 첫번째 인자로 넣어줌 속성들
+- 컴포넌트는 어떤 JSX를 반환하는 단지 함수
+
+## 4.1 Memo
+뭐든 props로 넣는다고 자동적으로 return 안으로 들거가는 건 아님  
+→ return 내부에 따로 인자 받아온 거 넣어줘야 함
+
+만약 부모가 어떤 state라도 변경이 있다하면 모든 자식들 re-render 된다  
+→ 느려질 수 있음
+
+React.memo()하면 props가 변경되지 않는다면 다시 그릴 필요가 없다는 걸 말해줌
+
+## 4.2 Prop Types
+props 타입 리액트에게 알려줌
+
+```jsx
+<script src="https://unpkg.com/prop-types@15.7.2/prop-types.js"></script>
+```
+
+이렇게 먼저 import 해주고
+
+```jsx
+Btn.propTypes = {
+	text: PropTypes.string,
+	fontSize: PropTypes.number,
+}
+```
+
+이런식으로 리액트에게 props 타입 알려줌
+- 꼭 들어가야 하는 것에는 `.isRequired` 붙여주기
+- 정의되지 않은 변수에 관한 기본값은 함수 매개변수 부분?에 `function Btn({text, **fontSize = 14**})` 이와 같이 줄 수 있음
+
+## 4.3 Recap
 정리 없음
