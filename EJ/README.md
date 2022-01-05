@@ -1,10 +1,10 @@
 [1강](#1강) | [2강](#2강) | [3강](#3강) | [4강](#4강)
 
-# 1강
+# 1강 - INTRODUCTION
 정리 없음
 <br/><br/>
 
-# 2강
+# 2강 - THE BASICS OF REACT
 ## 2.1 Before React
 - html에서는 바로 변경된 결과 값이 텍스트에 반영되지 않음
     
@@ -110,7 +110,7 @@ function Title() {
 > 직접 만든 컴포넌트를 렌더링해서 다른 곳에서 사용할 때 항상 대문자로 시작해야 함.
 <br/><br/>
 
-# 3강
+# 3강 - STATE
 ## 3.0 Understanding State
 state - 값이 바뀔 데이터 담아 두는데 쓰임
 
@@ -181,7 +181,7 @@ state를 바탕으로 UI를 변경할 수 있다는 게 얼마나 유용한 건�
 
 React.memo()하면 props가 변경되지 않는다면 다시 그릴 필요가 없다는 걸 말해줌
 
-## 4.2 Prop Types
+## 4.2 Prop Types - PROPS
 props 타입 리액트에게 알려줌
 
 ```jsx
