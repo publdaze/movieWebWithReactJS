@@ -1,0 +1,54 @@
+import { useEffect, useState } from "react";
+
+function App() {
+  const [loading, setLoading] = useState(true);
+  const [coins, setCoins] = useState([]);
+  const [asset, setAsset] = useState();
+
+  const onChange = (event) => setAsset(event.target.value);
+  const onSubmit = (event) => {
+    event.preventDefault(); // 없애면 새로 고침 됨.
+    if (asset === null) {
+      return;
+    }
+    setAsset(null); // 제출했을 때 비워지도록 함.
+  };
+
+  useEffect(() => {
+    fetch("https://api.coinpaprika.com/v1/tickers")
+    .then((response) => response.json())
+    .then((json) => {
+      setCoins(json);
+      setLoading(false);
+    });
+  }, [])
+
+  return(
+    <div>
+      <h1>The Coins! {loading ? "" : `(${coins.length})`}</h1>
+      {loading ? <strong>Loading...</strong> : (
+        <div>
+          <select>
+            {coins.map((coin) => (
+              <option key={coin.id}>
+                {coin.name} ({coin.symbol}): ${coin.quotes.USD.price} USD
+              </option>
+            ))}
+          </select>
+          <br/>
+          <form>
+            <input 
+              onChange={onChange}
+              value={asset}
+              type="number" 
+              placeholder="write your assets." 
+            />
+            <button> exchange </button>
+          </form>
+        </div>
+      )}
+    </div>
+  );
+}
+
+export default App;
